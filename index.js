@@ -4,6 +4,7 @@ const PORT = 3000;
 const bodyParser = require("body-parser");
 const { Komentar } = require("./models");
 
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
