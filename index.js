@@ -12,7 +12,7 @@ app.use(cors({origin:"*"}))
 
 app.get("/komentar", async (req, res) => {
   try {
-    const results = await Komentar.findAll()
+    const results = await Komentar.findAll({order:[["nama", "ASC"]]})
     return res.send({
       message: "Berhasil menampilkan data",
       data: results,
